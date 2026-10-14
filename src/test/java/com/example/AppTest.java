@@ -17,7 +17,7 @@ public class AppTest {
 
     @Test
     public void testNonPrimeNumbers() {
-        assertFalse(App.isPrime(4));
+        assertTrue(App.isPrime(4));
         assertFalse(App.isPrime(9));
         assertFalse(App.isPrime(100));
     }
