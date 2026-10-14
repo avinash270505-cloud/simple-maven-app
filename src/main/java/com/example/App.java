@@ -1,17 +1,29 @@
+
 package com.example;
 
 public class App {
-    public static void main(String[] args) {
-        int marks = 85;
 
-        if (marks >= 90) {
-            System.out.println("Grade: A");
-        } else if (marks >= 75) {
-            System.out.println("Grade: B");
-        } else if (marks >= 50) {
-            System.out.println("Grade: C");
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= number / i; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int number = 17;
+
+        if (isPrime(number)) {
+            System.out.println(number + " is a prime number.");
         } else {
-            System.out.println("Fail");
+            System.out.println(number + " is not a prime number.");
         }
     }
 }
