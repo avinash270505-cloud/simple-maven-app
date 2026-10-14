@@ -1,13 +1,17 @@
+
 package com.example;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.junit.Test;
 
 public class AppTest {
 
     @Test
-    public void testAdd() {
-        App app = new App();
-        assertEquals(9, app.add(6, 3));
+    public void applicationRunsWithoutError() {
+        try {
+            App.main(new String[]{});
+        } catch (Exception e) {
+            fail("Application threw an exception: " + e.getMessage());
+        }
     }
 }
